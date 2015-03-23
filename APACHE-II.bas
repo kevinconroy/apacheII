@@ -251,7 +251,7 @@ Function APACHEII(AGE, TEMP, MAP, HR, RR, AA, PAO2, PH, HCO3, NA, K, ARF, CR, HC
         APS_POINTS = APS_POINTS + (2 * ARF_MULTIPLIER)
     ElseIf (CR < 1.5 And CR >= 0.6) Or IsEmpty(CR) Then
         APS_POINTS = APS_POINTS + (0 * ARF_MULTIPLIER)
-    ElseIf K < 0.6 And K > 0 Then
+    ElseIf CR < 0.6 And CR > 0 Then
         APS_POINTS = APS_POINTS + (2 * ARF_MULTIPLIER)
     Else
         ERRMSG = "Serium Creatinne (CR) must be < 20 and > 0"
